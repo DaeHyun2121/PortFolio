@@ -29,7 +29,8 @@ img {
   --xxx-large-font: 48px;
   --xxxx-large-font: 64px;
 
-  /* font-family */
+  /* font-style - color, family */
+  --font-color: #313130;
   --font-lobster: "Lobster", cursive;
   --font-arimo: "Arimo", sans-serif;
   --font-righteous: "Righteous", cursive;
@@ -63,9 +64,6 @@ img {
 
   /* background-color */
   --bg-color: #f4fcff;
-
-  /* color */
-  --font-color: #313130;
   --blue-color: #2a9be9;
 }
 
