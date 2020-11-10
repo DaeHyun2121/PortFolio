@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* size, color */
+:root {
+  /* border-radius */
+  --small-border-radius: 4px;
+  --medium-border-radius: 8px;
+  --large-border-radius: 12px;
+
+  /* font-size */
+  --xx-small-font: 12px;
+  --x-small-font: 14px;
+  --small-font: 16px;
+  --medium-font: 18px;
+  --large-font: 20px;
+  --x-large-font: 24px;
+  --xx-large-font: 32px;
+  --xxx-large-font: 48px;
+
+  /* icon-size */
+  --small-icon: 12px;
+  --medium-icon: 16px;
+  --large-icon: 24px;
+  --x-large-icon: 32px;
+
+  /* background-color */
+  --bg-color: #f4fcff;
+
+  /* color */
+  --font-color: #313130;
+  --blue-color : #2a9be9: 
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+
