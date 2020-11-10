@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,15 +7,53 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- google fonts link -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700%7CVT323%7CRubik:300,700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400&family=Lobster&family=Righteous&display=swap" rel="stylesheet">
 
+    <!-- font awesome link -->
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+ 
     <!-- js link -->
     <script src="js/index.js"></script>
   </head>
   <body>
-    <div id="layout"></div>
+    <div class="hamburger" onclick="openNav()">
+      <img src="image/hamburger.svg" alt="hamburger" />
+    </div>
+
+    <div id="Sidenav" class="sidenav">
+      <div class="menu">
+        <p class="title">DH PortFolio</p>
+        <nav>
+          <li>
+            <img src="image/home.svg" alt="home"><a href="#"></i>Home</a>
+          </li>
+          <li>
+            <img src="image/home.svg" alt="aa"><a href="#"></i>Home</a>
+          </li>
+          <li>
+            <img src="image/content.svg" alt="se"><a href="#"></i>Content</a>
+          </li>
+          <li>
+            <img src="image/home.svg" alt="aa"><a href="#"></i>Home</a>
+          </li>
+
+        </nav>
+      </div>
+      <div class="blind" onclick="closeNav()"></div>
+    </div>
+
+    <div id="layout">
+      <div id="section1">
+        <img src="image/section1.jpg" alt="section1" />
+        <div class="blind"></div>
+        <div class="section1-text">
+          <p class="headTitle">DH PortFolio</p>
+          <p class="subTitle">Stylish portfolio of future programmer DH</p>
+          <div class="btn">
+            <a href="#">my asd</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
