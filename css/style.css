@@ -7,10 +7,6 @@
   text-decoration: none;
 }
 
-img {
-  object-fit: cover;
-}
-
 /* size, color */
 :root {
   /* border-radius */
@@ -28,12 +24,14 @@ img {
   --xx-large-font: 32px;
   --xxx-large-font: 48px;
   --xxxx-large-font: 64px;
+  --xxxxx-large-font: 128px;
 
   /* font-style - color, family */
   --font-color: #313130;
   --font-lobster: "Lobster", cursive;
   --font-arimo: "Arimo", sans-serif;
   --font-righteous: "Righteous", cursive;
+  --font-playfair: "Playfair Display", serif;
 
   /* icon-size */
   --small-icon: 12px;
@@ -68,7 +66,11 @@ img {
 }
 
 body {
-  background-color: white;
+  background-color: #f4f7f6;
+}
+
+img {
+  object-fit: cover;
 }
 
 h1,
@@ -81,6 +83,7 @@ p {
   font-family: var(--font-arimo);
 }
 
+/* sidenav */
 .sidenav {
   position: fixed;
   z-index: 950;
@@ -97,12 +100,14 @@ p {
   display: grid;
 
   grid-template-columns: 350px 1fr;
-  grid-template-areas: "asd blind";
+  grid-template-rows: 100%;
+  grid-template-areas: "menu blind";
 
   transition: 0.5s;
 }
 
 .sidenav .menu {
+  grid-area: menu;
   width: 350px;
   height: 100%;
 
@@ -160,57 +165,109 @@ p {
 }
 
 #layout {
+  width: 100%;
   height: auto;
 }
 
-.hamburger {
+/* header */
+header {
   position: fixed;
 
-  z-index: 900;
-
-  top: 20px;
-  left: 20px;
-
-  width: var(--xx-large-icon);
-  height: var(--xx-large-icon);
-
-  background-color: var(--blue-color);
-  border-radius: var(--medium-border-radius);
-
-  cursor: pointer;
-}
-
-.hamburger:hover {
-  box-shadow: 0 0 0 2px hsl(0 0% 84%);
-  background-color: #2c2c2c;
-  transition: 0.3s;
-}
-
-.hamburger > img {
-  width: 45%;
-  height: 45%;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-}
-
-#section1 {
-  position: relative;
-
-  height: 100vh;
-}
-
-#section1 > img {
   width: 100%;
+  height: 70px;
+
+  display: flex;
+
+  border-bottom: 1px solid #dfdfdf;
+}
+
+header .hamburger {
+  width: 130px;
   height: 100%;
 
-  object-position: 100% 100%;
+  font-size: var(--x-small-font);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 var(--x-large-padding);
+
+  border-right: 1px solid #eeebeb;
 }
 
-#section1 .blind {
+header .hamburger img {
+  width: var(--medium-icon);
+  height: var(--medium-icon);
+}
+
+header .logo {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: var(--x-large-font);
+  font-weight: bold;
+
+  font-family: var(--font-righteous);
+}
+
+/* slide */
+.slide {
+  position: absolute;
+
+  width: 100%;
+  height: 700px;
+
+  margin-top: 70px;
+
+  overflow: hidden;
+}
+
+.slide .mySlides {
+  position: relative;
+
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: calc(100% / 3);
+  grid-template-areas:
+    "a b"
+    "a c"
+    "a c";
+}
+
+.mySlides .left {
+  grid-area: a;
+  background-color: #d8dde3;
+}
+.mySlides .right-top {
+  grid-area: b;
+  background-color: #5f76a8;
+}
+.mySlides .right-bottom {
+  grid-area: c;
+}
+.mySlides .right-bottom > img {
+  width: 100%;
+  height: 100%;
+}
+
+.mySlides .back-title {
+  position: absolute;
+
+  color: #fff;
+  font-size: var(--xxxxx-large-font);
+  font-family: var(--font-playfair);
+
+  top: 40%;
+  left: 3%;
+}
+
+.mySlides .blind {
   position: absolute;
   top: 0;
   left: 0;
@@ -218,54 +275,29 @@ p {
   width: 100%;
   height: 100%;
 
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: hsl(0 0% 0% / 50%);
 }
 
-#section1 .section1-text {
+.prev,
+.next {
+  cursor: pointer;
   position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-size: 30px;
 
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-
-  color: #fff;
-
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-#section1 .section1-text .headTitle {
-  font-size: var(--xxxx-large-font);
-  font-family: var(--font-righteous);
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
-#section1 .section1-text .subTitle {
-  font-size: var(--x-large-font);
-}
-
-#section1 .section1-text .btn {
-  width: 120px;
-  height: 50px;
-
-  background-color: var(--blue-color);
-  border-radius: var(--medium-border-radius);
-
-  margin: 0 auto;
-  margin-top: var(--large-margin);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#section1 .section1-text .btn:hover {
-  box-shadow: 0 0 0 2px hsl(0 0% 84%);
-  background-color: #2c2c2c;
-  transition: 0.3s;
-}
-
-#section1 .section1-text .btn a {
-  color: #fff;
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
