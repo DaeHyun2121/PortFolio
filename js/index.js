@@ -12,35 +12,54 @@ function closeNav() {
 }
 
 // slide
-var slideIndex = 1;
-showSlides(slideIndex);
+jQuery(document).ready(function ($) {
+  var slideCount = $("#slider ul li").length;
+  var slideWidth = $("#slider ul li > img").width();
+  var slideHeight = (document.getElementById("li").style.height = "700px");
+  var sliderUlWidth = slideCount * slideWidth;
 
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
+  $("#slider").css({ width: slideWidth, height: slideHeight });
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
+  $("#slider ul").css({
+    width: sliderUlWidth,
+    marginLeft: -slideWidth,
+  });
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {
-    slideIndex = 1;
+  $("#slider ul li:last-child").prependTo("#slider ul");
+
+  function moveLeft() {
+    $("#slider ul").animate(
+      {
+        left: +slideWidth,
+      },
+      300,
+      function () {
+        $("#slider ul li:last-child").prependTo("#slider ul");
+        $("#slider ul").css("left", "");
+      }
+    );
   }
-  if (n < 1) {
-    slideIndex = slides.length;
+
+  function moveRight() {
+    $("#slider ul").animate(
+      {
+        left: -slideWidth,
+      },
+      300,
+      function () {
+        $("#slider ul li:first-child").appendTo("#slider ul");
+        $("#slider ul").css("left", "");
+      }
+    );
   }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  // captionText.innerHTML = dots[slideIndex - 1].alt;
-}
+
+  $("a.control_prev").click(function () {
+    moveLeft();
+  });
+
+  $("a.control_next").click(function () {
+    moveRight();
+  });
+});
+
+// circle progress
