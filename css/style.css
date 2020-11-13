@@ -308,11 +308,11 @@ header .logo {
   height: 100%;
 
   background-color: var(--blind-color);
+  transition: all 0.3s;
 }
 
 #slider ul li .blind:hover {
   background-color: hsl(0 0% 0% / 55%);
-  transition: all 0.3s;
   cursor: pointer;
 }
 
@@ -343,6 +343,8 @@ a.control_prev {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: all 0.3s;
 }
 
 a.control_next:hover,
@@ -350,7 +352,7 @@ a.control_prev:hover {
   border: 2px solid var(--font-slider-color);
   color: var(--font-slider-color);
 
-  transition: all 0.3s;
+
 }
 
 #slider .date-title {
