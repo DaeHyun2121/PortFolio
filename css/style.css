@@ -33,19 +33,20 @@
   --font-arimo: "Arimo", sans-serif;
   --font-righteous: "Righteous", cursive;
   --font-playfair: "Playfair Display", serif;
+  --font-abel: "Abel", sans-serif;
 
   /* icon-size */
   --small-icon: 12px;
   --medium-icon: 16px;
-  --large-icon: 24px;
+  --large-icon: 22px;
   --x-large-icon: 32px;
   --xx-large-icon: 36px;
   --xxx-large-icon: 48px;
 
   /* margin */
-  --small-margin-radius: 4px;
-  --medium-margin-radius: 8px;
-  --large-margin-radius: 12px;
+  --small-margin: 4px;
+  --medium-margin: 8px;
+  --large-margin: 12px;
   --medium-margin: 16px;
   --large-margin: 24px;
   --x-large-margin: 32px;
@@ -106,7 +107,7 @@ p {
   grid-template-rows: 100%;
   grid-template-areas: "menu blind";
 
-  transition: 0.5s;
+  transition: all 0.5s;
 }
 
 .sidenav .menu {
@@ -131,7 +132,7 @@ p {
 
 .sidenav .menu nav {
   width: 100%;
-  height: 240px;
+  height: 300px;
 
   display: flex;
   flex-direction: column;
@@ -310,7 +311,7 @@ header .logo {
 
 #slider ul li .blind:hover {
   background-color: hsl(0 0% 0% / 55%);
-  transition: 0.3s;
+  transition: all 0.3s;
   cursor: pointer;
 }
 
@@ -348,7 +349,7 @@ a.control_prev:hover {
   border: 2px solid var(--font-slider-color);
   color: var(--font-slider-color);
 
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 #slider .date-title {
@@ -427,8 +428,6 @@ a.control_prev:hover {
   height: 100%;
   overflow: hidden;
   position: absolute;
-  top: 0;
-  z-index: 1;
 }
 .progress .progress-left {
   left: 0;
@@ -437,7 +436,7 @@ a.control_prev:hover {
   width: 100%;
   height: 100%;
   background: none;
-  border-width: 2px;
+  border-width: 3px;
   border-style: solid;
   position: absolute;
   top: 0;
@@ -568,4 +567,81 @@ a.control_prev:hover {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
   }
+}
+
+/* tool */
+#tool {
+  height: 280px;
+
+  border-bottom: 1px solid #e6eaea;
+  margin-bottom: 30px;
+}
+
+#tool .tool-box {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#tool .tool-box .top {
+  height: 40%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tool .tool-box .top .tool-title {
+  font-size: var(--large-font);
+  color: #1f2121;
+
+  font-family: var(--font-abel);
+}
+
+#tool .tool-box .bottom {
+  height: 60%;
+}
+
+#tool .tool-box .bottom span,
+#tool .tool-box .bottom .tag-bottom li {
+  border: 1px solid #1f2121;
+  border-radius: 36px;
+
+  color: #202121;
+  font-weight: lighter;
+  font-family: var(--font-abel);
+
+  padding: 5px 20px;
+  margin: var(--small-margin);
+}
+
+#tool .tool-box .bottom span:hover {
+  border: 1px solid var(--font-slider-color);
+  color: var(--font-slider-color);
+
+  transition: all 0.3s;
+}
+
+#tool .tool-box .bottom .tag-top,
+#tool .tool-box .bottom .tag-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tool .tool-box .bottom .tag-bottom li {
+  width: var(--x-large-icon);
+  height: var(--x-large-icon);
+  padding: 0;
+  border: 0;
+}
+
+#tool .tool-box .bottom .tag-bottom .a {
+  background-color: #2779a7;
+}
+#tool .tool-box .bottom .tag-bottom .b {
+  background-color: #7f8285;
 }

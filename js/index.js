@@ -2,13 +2,13 @@
 function openNav() {
   document.getElementById("Sidenav").style.width = "100%";
   document.getElementById("layout").style.marginLeft = "350px";
-  document.getElementById("layout").style.transition = "0.4s";
+  document.getElementById("layout").style.transition = "all 0.4s";
 }
 
 function closeNav() {
   document.getElementById("Sidenav").style.width = "0%";
   document.getElementById("layout").style.marginLeft = "0px";
-  document.getElementById("layout").style.transition = "0.4s";
+  document.getElementById("layout").style.transition = "all 0.4s";
 }
 
 // slide
@@ -62,4 +62,15 @@ jQuery(document).ready(function ($) {
   });
 });
 
-// circle progress
+// scroll
+// let delta = 0;
+// let scrolling = false;
+// $("#home").on("click", function () {
+//   $("#layout").animate({ scrollTop: 0 }, 400);
+//   delta = 1;
+// });
+
+// $("#slide-btn").on("click", function () {
+//   $("#slider").animate({ scrollTop: 969 }, 400);
+//   delta = 2;
+// });

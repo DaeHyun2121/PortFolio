@@ -1,178 +1,220 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <!-- google fonts link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@400&family=Lobster&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- google fonts link -->
-  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400&family=Lobster&family=Righteous&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <!-- font awesome link -->
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
-  <!-- font awesome link -->
-  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <!-- js link -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/index.js"></script>
+  </head>
 
-  <!-- js link -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/index.js"></script>
-
-</head>
-
-<body>
-  <div id="Sidenav" class="sidenav">
-    <div class="menu">
-      <p class="title">DH PortFolio</p>
-      <nav>
-        <li>
-          <img src="image/home.svg" alt="home"><a href="#"></i>Home</a>
-        </li>
-        <li>
-          <img src="image/content.svg" alt="se"><a href="#"></i>Content</a>
-        </li>
-
-      </nav>
+  <body>
+    <div id="Sidenav" class="sidenav">
+      <div class="menu">
+        <p class="title">DH PortFolio</p>
+        <nav>
+          <li><img src="image/home.svg" alt="home" /><a href="#">Home</a></li>
+          <li>
+            <img src="image/learn.svg" alt="learn" /><a href="#">Learn</a>
+          </li>
+          <li>
+            <img src="image/document.svg" alt="project" /><a href="#"
+              >Project</a
+            >
+          </li>
+          <li>
+            <img src="image/timeline.svg" alt="timeline" />
+            <a href="#">Timeline</a>
+          </li>
+          <li>
+            <img src="image/profile.svg" alt="profile" />
+            <a href="#">Profile</a>
+          </li>
+        </nav>
+      </div>
+      <div class="blind" onclick="closeNav()"></div>
     </div>
-    <div class="blind" onclick="closeNav()"></div>
-  </div>
 
-  <div id="layout">
+    <div id="layout">
+      <!-- header -->
+      <header>
+        <div class="hamburger" onclick="openNav()">
+          <img src="image/hamburger.svg" alt="hamburger" />
+          <p>MENU</p>
+        </div>
 
-    <!-- header -->
-    <header>
-      <div class="hamburger" onclick="openNav()">
-        <img src="image/hamburger.svg" alt="hamburger">
-        <p>MENU</p>
+        <p class="logo">DH PortFolio.</p>
+      </header>
+
+      <!-- slide -->
+      <div id="slider">
+        <div class="btn">
+          <a class="control_prev"><i class="fas fa-chevron-left"></i></a>
+          <a class="control_next"><i class="fas fa-chevron-right"></i></a>
+        </div>
+        <p class="date-title">Site of the Day <b>November 12, 2020</b></p>
+
+        <div class="main">
+          <p class="main-title">MY PortFolio <br /></p>
+          <p class="sub-title">BY Programmer <b>D.H.</b></p>
+          <div class="row">
+            <div id="circle" class="col-md-3 col-sm-6">
+              <div class="progress html">
+                <span class="progress-left">
+                  <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value">90%</div>
+              </div>
+              <p>HTML</p>
+            </div>
+
+            <div id="circle" class="col-md-3 col-sm-6">
+              <div class="progress css">
+                <span class="progress-left">
+                  <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value">90%</div>
+              </div>
+              <p>CSS</p>
+            </div>
+
+            <div id="circle" class="col-md-3 col-sm-6">
+              <div class="progress js">
+                <span class="progress-left">
+                  <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value">60%</div>
+              </div>
+              <p>JavaScript</p>
+            </div>
+
+            <div id="circle" class="col-md-3 col-sm-6">
+              <div class="progress react">
+                <span class="progress-left">
+                  <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value">75%</div>
+              </div>
+              <p>React</p>
+            </div>
+
+            <div id="circle" class="col-md-3 col-sm-6">
+              <div class="progress jsp">
+                <span class="progress-left">
+                  <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value">60%</div>
+              </div>
+              <p>JSP</p>
+            </div>
+          </div>
+        </div>
+        <ul>
+          <li id="li">
+            <div class="left"></div>
+            <div class="right-top"></div>
+            <div class="right-bottom">
+              <img src="image/slide1.jpg" alt="slide1" />
+            </div>
+            <p class="back-title">
+              DH <br />
+              PortFolio
+            </p>
+            <div class="blind"></div>
+          </li>
+
+          <li id="li">
+            <div class="left"></div>
+            <div class="right-top"></div>
+            <div class="right-bottom">
+              <img src="image/slide2.jpg" alt="slide2" />
+            </div>
+            <p class="back-title2">
+              DH <br />
+              PortFolio
+            </p>
+            <div class="blind"></div>
+          </li>
+
+          <li id="li">
+            <div class="left"></div>
+            <div class="right-top"></div>
+            <div class="right-bottom">
+              <img src="image/slide3.jpg" alt="slide3" />
+            </div>
+            <p class="back-title3">
+              DH <br />
+              PortFolio
+            </p>
+            <div class="blind"></div>
+          </li>
+        </ul>
       </div>
 
-      <p class="logo">
-        DH PortFolio.
-      </p>
-    </header>
-
-    <!-- slide -->
-    <div id="slider">
-      <div class="btn">
-        <a href="#" class="control_prev"><i class="fas fa-chevron-left"></i></a>
-        <a href="#" class="control_next"><i class="fas fa-chevron-right"></i></a>
-      </div>
-      <p class="date-title">Site of the Day <b>November 12, 2020</b></p>
-      
-      <div class="main">
-        <p class="main-title">MY PortFolio <br></p>
-        <p class="sub-title">BY Programmer <b>D.H.</b></p>
-        <div class="row">
-          <div id="circle" class="col-md-3 col-sm-6">
-            <div class="progress html">
-              <span class="progress-left">
-                <span class="progress-bar"></span>
-              </span>
-              <span class="progress-right">
-                <span class="progress-bar"></span>
-              </span>
-              <div class="progress-value">90%</div>
-            </div>
-            <p>HTML</p>
+      <!-- tool -->
+      <div id="tool">
+        <div class="tool-box">
+          <div class="top">
+            <p class="tool-title">Learned the tags below.</p>
           </div>
 
-          <div id="circle" class="col-md-3 col-sm-6">
-            <div class="progress css">
-              <span class="progress-left">
-                <span class="progress-bar"></span>
-              </span>
-              <span class="progress-right">
-                <span class="progress-bar"></span>
-              </span>
-              <div class="progress-value">90%</div>
+          <div class="bottom">
+            <div class="tag-top">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>JQuery</span>
+              <span>TypeScript</span>
+              <span>Android</span>
             </div>
-            <p>CSS</p>
-          </div>
-
-          <div id="circle" class="col-md-3 col-sm-6">
-            <div class="progress js">
-              <span class="progress-left">
-                <span class="progress-bar"></span>
-              </span>
-              <span class="progress-right">
-                <span class="progress-bar"></span>
-              </span>
-              <div class="progress-value">60%</div>
+            <div class="tag-bottom">
+              <span>C</span>
+              <span>PHP</span>
+              <span>NODE</span>
+              <span>PHP</span>
+              <span>React</span>
+              <li class="a"></li>
+              <li class="b"></li>
             </div>
-            <p>JavaScript</p>
           </div>
-
-          <div id="circle" class="col-md-3 col-sm-6">
-            <div class="progress react">
-              <span class="progress-left">
-                <span class="progress-bar"></span>
-              </span>
-              <span class="progress-right">
-                <span class="progress-bar"></span>
-              </span>
-              <div class="progress-value">75%</div>
-            </div>
-            <p>React</p>
-          </div>
-
-          <div id="circle" class="col-md-3 col-sm-6">
-            <div class="progress jsp">
-              <span class="progress-left">
-                <span class="progress-bar"></span>
-              </span>
-              <span class="progress-right">
-                <span class="progress-bar"></span>
-              </span>
-              <div class="progress-value">60%</div>
-            </div>
-            <p>JSP</p>
-          </div>
-          
         </div>
       </div>
-      <ul>
-        <li id="li">
-          <div class="left"></div>
-          <div class="right-top"></div>
-          <div class="right-bottom">
-            <img src="image/slide1.jpg" alt="slide1">
-          </div>
-          <p class="back-title">
-            DH <br>
-            PortFolio
-          </p>
-          <div class="blind"></div>
-        </li>
-
-        <li id="li">
-          <div class="left"></div>
-          <div class="right-top"></div>
-          <div class="right-bottom">
-            <img src="image/slide2.jpg" alt="slide2">
-          </div>
-          <p class="back-title2">
-            DH <br>
-            PortFolio
-          </p>
-          <div class="blind"></div>
-        </li>
-
-        <li id="li">
-          <div class="left"></div>
-          <div class="right-top"></div>
-          <div class="right-bottom">
-            <img src="image/slide3.jpg" alt="slide3">
-          </div>
-          <p class="back-title3">
-            DH <br>
-            PortFolio
-          </p>
-          <div class="blind"></div>
-        </li>
-      </ul>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
