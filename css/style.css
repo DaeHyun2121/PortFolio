@@ -66,6 +66,7 @@
   /* background-color */
   --bg-color: #f4fcff;
   --blue-color: #2a9be9;
+  --blind-color: hsl(0 0% 0% / 45%);
 }
 
 body {
@@ -306,7 +307,7 @@ header .logo {
   width: 100%;
   height: 100%;
 
-  background-color: hsl(0 0% 0% / 45%);
+  background-color: var(--blind-color);
 }
 
 #slider ul li .blind:hover {
@@ -574,7 +575,6 @@ a.control_prev:hover {
   height: 280px;
 
   border-bottom: 1px solid #e6eaea;
-  margin-bottom: 30px;
 }
 
 #tool .tool-box {
@@ -595,7 +595,7 @@ a.control_prev:hover {
 }
 
 #tool .tool-box .top .tool-title {
-  font-size: var(--large-font);
+  font-size: var(--x-large-font);
   color: #1f2121;
 
   font-family: var(--font-abel);
@@ -644,4 +644,107 @@ a.control_prev:hover {
 }
 #tool .tool-box .bottom .tag-bottom .b {
   background-color: #7f8285;
+}
+
+/* project */
+#project {
+  max-height: 1020px;
+  height: auto;
+
+  overflow: hidden;
+
+  width: 90%;
+  margin: 0 auto;
+}
+
+#project .title {
+  text-align: center;
+
+  font-size: var(--x-large-font);
+  color: #1f2121;
+
+  font-family: var(--font-abel);
+
+  margin-top: var(--xxx-large-margin);
+  margin-bottom: var(--x-large-margin);
+}
+
+#project .tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#project .tab div {
+  width: 100px;
+  height: 35px;
+
+  display: flex;
+  justify-content: center;
+
+  font-size: var(--small-font);
+  font-family: var(--font-abel);
+  font-weight: lighter;
+}
+
+#project .tab div.active {
+  font-weight: bold;
+  border-bottom: 3px solid #1f2121;
+}
+
+#First,
+#Second,
+#Third {
+  display: grid;
+}
+
+#project .tabcontent {
+  width: 100%;
+  height: 800px;
+
+  margin-top: var(--x-large-margin);
+  margin-bottom: 26px;
+}
+
+#project #All {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+#project #First,
+#project #Second,
+#project #Third {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+#project .tabcontent div {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+#project .tabcontent div > img {
+  width: 100%;
+  height: 100%;
+}
+
+#project .tabcontent div .blind {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: var(--blind-color);
+
+  z-index: 2;
+
+  display: none;
 }

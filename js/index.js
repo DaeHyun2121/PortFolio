@@ -62,15 +62,21 @@ jQuery(document).ready(function ($) {
   });
 });
 
-// scroll
-// let delta = 0;
-// let scrolling = false;
-// $("#home").on("click", function () {
-//   $("#layout").animate({ scrollTop: 0 }, 400);
-//   delta = 1;
-// });
+// tab
+function openContent(evt, ContentName) {
+  var i, tabcontent, tablinks;
 
-// $("#slide-btn").on("click", function () {
-//   $("#slider").animate({ scrollTop: 969 }, 400);
-//   delta = 2;
-// });
+  tabcontent = document.getElementsByClassName("tabcontent");
+
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(ContentName).style.display = "grid";
+  evt.currentTarget.className += " active";
+}
