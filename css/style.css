@@ -108,7 +108,7 @@ p {
   grid-template-rows: 100%;
   grid-template-areas: "menu blind";
 
-  transition: all 0.5s;
+  transition : all 0.5s;
 }
 
 .sidenav .menu {
@@ -748,5 +748,9 @@ a.control_prev:hover {
 
   z-index: 2;
 
-  display: none;
+  transition: 5s; 
+}
+
+#project .tabcontent div:hover .blind{
+  display: block;
 }
