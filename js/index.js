@@ -13,10 +13,10 @@ function closeNav() {
 
 // slide
 jQuery(document).ready(function ($) {
-  var slideCount = $("#slider ul li").length;
-  var slideWidth = $("#slider ul li > img").width();
-  var slideHeight = (document.getElementById("li").style.height = "700px");
-  var sliderUlWidth = slideCount * slideWidth;
+  let slideCount = $("#slider ul li").length;
+  let slideWidth = $("#slider ul li > img").width();
+  let slideHeight = (document.getElementById("li").style.height = "700px");
+  let sliderUlWidth = slideCount * slideWidth;
 
   $("#slider").css({ width: slideWidth, height: slideHeight });
 
@@ -64,7 +64,7 @@ jQuery(document).ready(function ($) {
 
 // tab
 function openContent(evt, ContentName) {
-  var i, tabcontent, tablinks;
+  let i, tabcontent, tablinks;
 
   tabcontent = document.getElementsByClassName("tabcontent");
 

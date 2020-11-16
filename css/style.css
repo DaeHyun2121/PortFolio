@@ -67,6 +67,9 @@
   --bg-color: #f4fcff;
   --blue-color: #2a9be9;
   --blind-color: hsl(0 0% 0% / 45%);
+  --blind-2-color: hsl(0 0% 0% / 25%);
+  --hover-blind-top: hsl(0 0% 0% / 35%);
+  --hover-blind-bottom: hsl(0 0% 0% / 75%);
 }
 
 body {
@@ -312,7 +315,7 @@ header .logo {
 }
 
 #slider ul li .blind:hover {
-  background-color: hsl(0 0% 0% / 55%);
+  background-color: hsl(0 0% 0% / 60%);
   cursor: pointer;
 }
 
@@ -735,6 +738,10 @@ a.control_prev:hover {
 #project .tabcontent div > img {
   width: 100%;
   height: 100%;
+  transition: all 0.3s;
+}
+#project .tabcontent div:hover img {
+  transform: scale(1.15);
 }
 
 #project .tabcontent div .blind {
@@ -744,13 +751,28 @@ a.control_prev:hover {
 
   width: 100%;
   height: 100%;
-  background-color: var(--blind-color);
+  background-color: var(--blind-2-color);
+
+  z-index: 2;
+}
+#project .tabcontent div:hover .blind {
+  background: linear-gradient(
+    var(--hover-blind-top),
+    var(--hover-blind-bottom)
+  );
+}
+
+#project .tabcontent div:hover .t {
+  display: block;
+}
+#project .tabcontent div .t {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  color: #fff;
 
   z-index: 2;
 
-  transition: 5s;
-}
-
-#project .tabcontent div:hover .blind {
-  display: block;
+  display: none;
 }
