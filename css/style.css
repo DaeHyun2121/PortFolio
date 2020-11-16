@@ -108,7 +108,7 @@ p {
   grid-template-rows: 100%;
   grid-template-areas: "menu blind";
 
-  transition : all 0.5s;
+  transition: all 0.5s;
 }
 
 .sidenav .menu {
@@ -351,8 +351,6 @@ a.control_next:hover,
 a.control_prev:hover {
   border: 2px solid var(--font-slider-color);
   color: var(--font-slider-color);
-
-
 }
 
 #slider .date-title {
@@ -654,9 +652,6 @@ a.control_prev:hover {
   height: auto;
 
   overflow: hidden;
-
-  width: 90%;
-  margin: 0 auto;
 }
 
 #project .title {
@@ -675,6 +670,8 @@ a.control_prev:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  border-bottom: 1px solid #e6eaea;
 }
 
 #project .tab div {
@@ -691,7 +688,8 @@ a.control_prev:hover {
 
 #project .tab div.active {
   font-weight: bold;
-  border-bottom: 3px solid #1f2121;
+  border-bottom: 3px solid #1e75e8;
+  color: #1e75e8;
 }
 
 #First,
@@ -701,8 +699,10 @@ a.control_prev:hover {
 }
 
 #project .tabcontent {
-  width: 100%;
+  width: 90%;
   height: 800px;
+
+  margin: 0 auto;
 
   margin-top: var(--x-large-margin);
   margin-bottom: 26px;
@@ -748,9 +748,9 @@ a.control_prev:hover {
 
   z-index: 2;
 
-  transition: 5s; 
+  transition: 5s;
 }
 
-#project .tabcontent div:hover .blind{
+#project .tabcontent div:hover .blind {
   display: block;
 }
