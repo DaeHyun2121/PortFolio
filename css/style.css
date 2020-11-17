@@ -766,8 +766,10 @@ a.control_prev:hover {
 }
 #project .tabcontent div .frame {
   position: absolute;
+
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
 
@@ -782,7 +784,10 @@ a.control_prev:hover {
 
 #project .tabcontent div .frame .frame-title,
 #project .tabcontent div .frame .frame-sub-desc,
-#project .tabcontent div .frame .frame-date {
+#project .tabcontent div .frame .frame-date,
+#project .tabcontent div .frame .cate-frame-title,
+#project .tabcontent div .frame .cate-frame-sub-desc,
+#project .tabcontent div .frame .cate-frame-date {
   font-family: var(--font-abel);
 }
 
@@ -799,6 +804,22 @@ a.control_prev:hover {
 
 #project .tabcontent div .frame .frame-date {
   font-size: var(--x-small-font);
+  position: absolute;
+
+  bottom: 15px;
+  right: 15px;
+}
+#project .tabcontent div .frame .cate-frame-title {
+  font-size: var(--xx-large-font);
+
+  margin-top: var(--xxx-large-margin);
+  margin-bottom: var(--xxx-large-margin);
+}
+#project .tabcontent div .frame .cate-frame-sub-desc {
+  font-size: var(--x-large-font);
+}
+#project .tabcontent div .frame .cate-frame-date {
+  font-size: var(--large-font);
   position: absolute;
 
   bottom: 15px;
