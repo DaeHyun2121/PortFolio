@@ -68,8 +68,8 @@
   --blue-color: #2a9be9;
   --blind-color: hsl(0 0% 0% / 45%);
   --blind-2-color: hsl(0 0% 0% / 25%);
-  --hover-blind-top: hsl(0 0% 0% / 35%);
-  --hover-blind-bottom: hsl(0 0% 0% / 75%);
+  --hover-blind-top: hsl(0 0% 0% / 30%);
+  --hover-blind-bottom: hsl(0 0% 0% / 50%);
 }
 
 body {
@@ -79,6 +79,10 @@ body {
 
 img {
   object-fit: cover;
+}
+
+a {
+  color: #fff;
 }
 
 h1,
@@ -729,7 +733,6 @@ a.control_prev:hover {
 
 #project .tabcontent div {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.12);
   overflow: hidden;
 
   cursor: pointer;
@@ -741,7 +744,7 @@ a.control_prev:hover {
   transition: all 0.3s;
 }
 #project .tabcontent div:hover img {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 #project .tabcontent div .blind {
@@ -755,24 +758,49 @@ a.control_prev:hover {
 
   z-index: 2;
 }
-#project .tabcontent div:hover .blind {
-  background: linear-gradient(
-    var(--hover-blind-top),
-    var(--hover-blind-bottom)
-  );
-}
 
-#project .tabcontent div:hover .t {
+#project .tabcontent div:hover .frame {
   display: block;
+
+  background-color: var(--hover-blind-top);
 }
-#project .tabcontent div .t {
+#project .tabcontent div .frame {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
 
-  color: #fff;
+  color: #f2f2f4;
 
-  z-index: 2;
+  z-index: 3;
 
   display: none;
+
+  text-align: center;
+}
+
+#project .tabcontent div .frame .frame-title,
+#project .tabcontent div .frame .frame-sub-desc,
+#project .tabcontent div .frame .frame-date {
+  font-family: var(--font-abel);
+}
+
+#project .tabcontent div .frame .frame-title {
+  font-size: var(--x-large-font);
+
+  margin-top: var(--xxx-large-margin);
+  margin-bottom: var(--x-large-margin);
+}
+
+#project .tabcontent div .frame .frame-sub-desc {
+  font-size: var(--small-font);
+}
+
+#project .tabcontent div .frame .frame-date {
+  font-size: var(--x-small-font);
+  position: absolute;
+
+  bottom: 15px;
+  right: 15px;
 }
