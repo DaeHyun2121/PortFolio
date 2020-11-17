@@ -908,7 +908,6 @@ a.control_prev:hover {
 
   margin-top: var(--small-margin);
 
-  content: " ";
   width: 2px;
   height: 60px;
 
@@ -930,7 +929,4 @@ a.control_prev:hover {
   color: #474f5e;
   font-size: var(--small-font);
   margin-top: var(--medium-margin);
-}
-
-#timeline .container .time-line .tag .tag-line .tag-date .tag-text:last-child {
 }
