@@ -12,7 +12,7 @@ function closeNav() {
 }
 
 // slide
-jQuery(document).ready(function ($) {
+$(document).ready(function () {
   let slideCount = $("#slider ul li").length;
   let slideWidth = $("#slider ul li > img").width();
   let slideHeight = (document.getElementById("li").style.height = "700px");
