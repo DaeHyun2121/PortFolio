@@ -947,6 +947,8 @@ a.control_prev:hover {
 }
 
 footer {
+  position: relative;
+
   width: 100%;
   height: 90px;
   border-top: 1px solid #e6eaea;
@@ -957,9 +959,48 @@ footer {
   color: #8b8b8b;
   font-size: var(--xx-small-font);
 
-  position: fixed;
-  bottom: 0;
-
   background-color: #fff;
   z-index: 5;
+}
+
+footer nav {
+  position: absolute;
+  left: 5%;
+
+  width: 180px;
+  height: 45px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+footer nav li {
+  width: 45px;
+  height: 100%;
+
+  border: 1px solid #212121;
+  border-radius: 50%;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+footer nav li:hover {
+  background-color: #2b3546;
+}
+
+footer nav li:hover svg {
+  stroke: #fff;
+  fill: #fff;
+}
+
+footer nav li svg {
+  width: 60%;
+  height: 60%;
 }
